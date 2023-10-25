@@ -16,9 +16,9 @@
         
         <!-- task list -->
         <ul v-if="todos.length > 0">
-            <li :class=" todos[index].done === true ? 'done' : '' " v-for="(todo, index) in todos">
+            <li :class=" todos[index].done === true ? 'done' : '' " v-for="(todo, index) in todos" :key=index>
                 {{ todo.text }}
-                <i class="fa-solid fa-x"></i>
+                <i class="fa-solid fa-x" @click="deleteTodo(index)"></i>
             </li>
         </ul>
         <h3 v-else >Nessun task</h3>

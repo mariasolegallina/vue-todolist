@@ -31,7 +31,11 @@ createApp({
             };
             
             this.todos.push(newTodo);
-
+            this.inputValue = '';
+        },
+        deleteTodo(todoIndex) {
+            console.log(todoIndex)
+            this.todos.splice(todoIndex)
         }
     },
     mounted() {
