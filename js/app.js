@@ -3,6 +3,7 @@ const {createApp} = Vue
 createApp({
     data() {
         return {
+            inputValue: '',
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -16,7 +17,7 @@ createApp({
                     text: 'Fare il bucato',
                     done: false
                 }
-            ]
+            ],
 
         }
     },
