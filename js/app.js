@@ -21,8 +21,18 @@ createApp({
 
         }
     },
-    methods() {
+    methods: {
+        addTodo() {
+            // console.log('click sul +')
 
+            const newTodo = {
+                text: this.inputValue,
+                done: false,
+            };
+            
+            this.todos.push(newTodo);
+
+        }
     },
     mounted() {
         console.log("OK");

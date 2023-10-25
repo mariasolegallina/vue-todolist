@@ -12,16 +12,16 @@
     <div id="app">
         <!-- input + button -->
         <input type="text" v-model="inputValue">
-        <!-- <h1>{{ inputValue }}</h1> -->
-        <button><i class="fa-solid fa-plus"></i></button>
+        <button @click="addTodo()"><i class="fa-solid fa-plus"></i></button>
+        
         <!-- task list -->
-        <ul>
+        <ul v-if="todos.length > 0">
             <li :class=" todos[index].done === true ? 'done' : '' " v-for="(todo, index) in todos">
                 {{ todo.text }}
                 <i class="fa-solid fa-x"></i>
             </li>
         </ul>
-        <h3>Nessun task</h3>
+        <h3 v-else >Nessun task</h3>
 
     </div>
     
